@@ -44,8 +44,35 @@
 }
 
 .divider {
+    width: 100%;
     margin-top: 50px;
-    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.divider span {
+    width: 25px;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(89%) sepia(16%) saturate(213%) hue-rotate(150deg) brightness(103%) contrast(83%);
+    background-repeat: no-repeat;
+    transition: .1s all;
+}
+
+.player[data-status="play"] {
+    background-image: url('./images/play.svg');
+}
+
+.player[data-status="pause"] {
+    background-image: url('./images//pause.svg');
+}
+
+.divider-line {
+    height: 2px;
+    width: 40%;
+    background-color: #4f5d74;
 }
 
 .diceButton {
